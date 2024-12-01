@@ -1,0 +1,111 @@
+.food-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px; /* Adjust as needed */
+    cursor: pointer;
+    position: relative; /* To position the add/remove icons correctly */
+}
+
+.food-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.food-item-img-container {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    position: relative; /* For positioning the add/remove icons */
+}
+
+.food-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.food-item-img-container:hover .food-item-img {
+    transform: scale(1.1);
+}
+
+.add {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.add:hover {
+    transform: scale(1.1);
+}
+
+.food-item-counter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.food-item-counter img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.food-item-counter img:hover {
+    transform: scale(1.1);
+}
+
+.food-item-counter p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.food-item-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.food-item-name-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.food-item-name-rating img {
+    width: 100px; /* Adjust the size of the rating stars */
+    height: auto;
+}
+
+.food-item-desc {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.food-item-price {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: tomato;
+}

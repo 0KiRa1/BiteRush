@@ -1,0 +1,94 @@
+.explore {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 2rem;
+}
+
+.explore h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.explore h1:hover {
+    color: #ff6347;
+}
+
+.explore .explore-para {
+    max-width: 60%;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.explore .explore-para:hover {
+    color: #333;
+}
+
+.explore .explore-list {
+    display: flex;
+    gap: 25px;
+    text-align: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+}
+
+.explore-list::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.explore-list-item:hover {
+    transform: scale(1.05);
+}
+
+.explore-list-item img {
+    width: 7.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-list-item img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.explore-list-item p {
+    margin-top: 10px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.explore-list-item p:hover {
+    color: tomato;
+    transform: scale(1.1);
+}
+
+.explore-list-item .active {
+    border: 4px solid tomato;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.explore hr {
+    margin: 10px 0;
+    background-color: #e2e2e2;
+    height: 1px;
+    width: 100%;
+    border: none;
+}
