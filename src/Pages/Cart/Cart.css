@@ -4,13 +4,19 @@
     margin: 40px auto;
     background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     animation: fadeIn 0.5s ease-out;
+    transition: box-shadow 0.3s ease;
+}
+
+.cart:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cart-items {
     width: 100%;
+    margin-top: 20px;
 }
 
 .cart-items-title {
@@ -19,10 +25,11 @@
     text-align: center;
     font-weight: bold;
     font-size: 18px;
-    padding: 10px 0;
-    background: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
 .cart-items-item {
@@ -30,26 +37,58 @@
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #eee;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cart-items-item:hover {
+    background: #fdfdfd;
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .cart-items-item img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 8px;
     margin: 0 auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cart-items-item img:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cart-items-item p {
     margin: 0;
+    font-size: 16px;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    width: 30px;
+    height: 30px;
+    background: tomato;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.quantity-controls button:hover {
+    background: darkred;
+    transform: scale(1.1);
 }
 
 .cart-items-item p:last-child {
@@ -59,11 +98,17 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.cart-items-item p:last-child:hover {
+    color: darkred;
+    transform: scale(1.1);
+}
+
 .cart-bottom {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-top: 80px;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .cart-total {
@@ -71,15 +116,16 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #f1f1f1;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cart-total h2 {
     margin-bottom: 20px;
     font-size: 24px;
+    color: #444;
 }
 
 .cart-total-details {
@@ -87,16 +133,17 @@
     justify-content: space-between;
     margin-bottom: 10px;
     font-size: 18px;
+    color: #555;
 }
 
 .cart-total button {
     align-self: center;
     width: 60%;
-    padding: 10px;
+    padding: 12px;
     background: tomato;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     font-size: 18px;
@@ -112,27 +159,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #f1f1f1;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .promo-code p {
     font-size: 18px;
     margin-bottom: 20px;
+    color: #555;
 }
 
 .promo-code-input {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .promo-code-input input {
-    width: 70%;
+    flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     transition: border-color 0.3s ease;
 }
@@ -143,12 +192,11 @@
 }
 
 .promo-code-input button {
-    width: 30%;
     padding: 10px;
     background: tomato;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     font-size: 16px;

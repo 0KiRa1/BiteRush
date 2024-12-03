@@ -32,7 +32,19 @@ const StoreContextProvider = (props) => {
         return total;
     }
 
-
+    const increaseQuantity = (id) => {
+        setCartItem((prev) => ({
+          ...prev,
+          [id]: (prev[id] || 0) + 1,
+        }));
+      };
+      
+    const decreaseQuantity = (id) => {
+        setCartItem((prev) => ({
+            ...prev,
+            [id]: prev[id] > 1 ? prev[id] - 1 : 0,
+        }));
+    };
     
 
     const contextVal = {
@@ -41,7 +53,9 @@ const StoreContextProvider = (props) => {
         setCartItem, 
         addToCart,
         removeFromCart,
-        totalCartAmount
+        totalCartAmount,
+        increaseQuantity,
+        decreaseQuantity
 
     }
 
