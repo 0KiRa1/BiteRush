@@ -7,7 +7,7 @@ function Footer() {
     <div className='footer'>
       <div className="footer-content">
         <div className="footer-left">
-            <img src={assets.logo} alt="" />
+            <img src={assets.logo1} alt="" />
             <p>BiteRush is your go-to platform for quick, reliable, and delicious food delivery. We partner with the best local restaurants to bring a diverse range of cuisines right to your doorstep, ensuring fast service and top-notch quality. Enjoy your favorite meals without the wait!</p>
             <div className="footer-soial-icons">
                 <img src={assets.facebook_icon} alt="" />
